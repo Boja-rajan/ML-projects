@@ -11,7 +11,7 @@ st.set_page_config(page_title="ML Predictor", layout="centered")
 # Using a decorator to cache the model so it doesn't reload on every interaction
 @st.cache_resource
 def load_model():
-    model_path = 'my_model.pkl'
+    model_path = 'linear.pkl'
     if os.path.exists(model_path):
         return joblib.load(model_path)
     else:
@@ -46,3 +46,4 @@ if st.button("Predict", type="primary"):
 
 st.divider()
 st.caption("Built with Streamlit • Hosted on GitHub")
+
